@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <title>Analizador de texto</title>
-  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,22 +14,39 @@
     <h1>Analizador de texto</h1>
   </header>
 
-  <textarea name="user-input"></textarea>  <br>
-<br>
-  <button id="reset-button">Borrar</button>
-  <br>
+  
+  
+  <h2 class="titulo-bienvenida">Comenzar</h2>
 
   <ul>
-  <li data-testid="word-count" class="my-word-count">Palabras: <span id="contador">0</span></li>
-  <li data-testid="character-count" class="my-character-count">Caracteres: <span id="contador2">0</span></li>
-  <li data-testid="character-no-spaces-count" class="my-character-no-spaces-count">Caracteres sin espacios: <span id="contador3">0</span></li>
-  <li data-testid="number-count" class="my-number-count">Números: <span id="contador4">0</span></li>
-  <li data-testid="number-sum" class="my-number-sum">Suma números: <span id="contador5">0</span></li>
-  <li data-testid="word-length-average" class="my-word-length-average">Promedio longitud: <span id="contador6">0</span></li>
+    <li data-testid="word-count" class="my-word-count">Palabras: </li><span id="contador">0</span>
+    
   
-  </ul>
+  
+    <li data-testid="character-count" class="my-character-count">Caracteres: </li>
+
+    <span id="contador2">0</span>
+  
+    <li data-testid="character-no-spaces-count" class="my-character-no-spaces-count">Caracteres sin espacios: </li>
+    <span id="contador3">0</span> 
+
+  <li data-testid="number-count" class="my-number-count">Números: </li>
+  <span id="contador4">0</span>
+
+  <li data-testid="number-sum" class="my-number-sum">Suma números: </li>
+  <span id="contador5">0</span>
+
+  <li data-testid="word-length-average" class="my-word-length-average">Promedio longitud: </li>
+  <span id="contador6">0</span>
  
+
+  </ul>
+  <textarea name="user-input"></textarea>  <br>
+  <br>
+    <button id="reset-button">Borrar</button>
+    <br> 
   <script src="index.js" type="module"></script>
 </body>
-<footer>Karla Vianey Contreras Duran</footer>
+
+<footer><p>Karla Vianey Contreras Duran</p></footer>
 </html>

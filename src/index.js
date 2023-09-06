@@ -2,7 +2,7 @@ import analyzer from './analyzer.js';
 
 //limpiar caja de texto con un event listener
 const caja = document.querySelector("[name='user-input']");
-const borrar = document.querySelector("#reset-button");
+const borrar = document.getElementById("reset-button");
 
 borrar.addEventListener("click", function() {
   document.querySelector("#contador").innerHTML = "0";
@@ -10,8 +10,33 @@ borrar.addEventListener("click", function() {
   document.querySelector("#contador3").innerHTML = "0";
   document.querySelector("#contador4").innerHTML = "0";
   document.querySelector("#contador5").innerHTML = "0";
+  document.querySelector("#contador6").innerHTML = "0";
   caja.value = "";
 });
+
+//titulo de bienvenida
+
+const tituloBienvenida = document.querySelector(".titulo-bienvenida");
+
+
+tituloBienvenida.addEventListener("click", function() {
+  tituloBienvenida.style.display = "none";
+  document.body.style.opacity = 1;
+  document.querySelector("button").style.opacity = 1;
+  document.querySelector("textarea[name='user-input']").style.opacity = 1;
+  document.querySelector("h1").style.opacity = 1;document.querySelector(".my-character-count").style.opacity = 1;
+  
+});
+
+function mostrarElementos() {
+  const elementos = document.querySelectorAll(".my-character-count, .my-character-no-spaces-count, .my-word-count, .my-number-count, .my-number-sum, .my-word-length-average, span");
+  for (let i = 0; i < elementos.length; i++) {
+    elementos[i].style.opacity = 1;
+  }
+}
+
+document.querySelector(".titulo-bienvenida").addEventListener("click", mostrarElementos);
+
 
 //llamemos la primera funcion 
 const primera = document.querySelector("[name='user-input']");
@@ -53,7 +78,7 @@ numeros.addEventListener("keyup", () => {
 const numeros3 = document.querySelector("[name='user-input']");
 numeros3.addEventListener("keyup", () => {
   const text = numeros3.value;
-  const numeros23 = analyzer.getNumbersSum(text);
+  const numeros23 = analyzer.getNumberSum(text);
   document.querySelector("#contador5").innerHTML = numeros23;
 });
 
